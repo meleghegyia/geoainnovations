@@ -1,0 +1,97 @@
+backend:
+  name: github
+  repo: meleghegyia/geoinnovations
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "fooldal"
+    label: "Főoldal"
+    files:
+      - name: "hero"
+        label: "Hero szekció"
+        file: "_data/hero.json"
+        fields:
+          - { label: "Főcím", name: "title", widget: "string" }
+          - { label: "Alcím", name: "subtitle", widget: "string" }
+          - { label: "Szlogen", name: "slogan", widget: "string" }
+          - { label: "Bevezető szöveg", name: "lead", widget: "text" }
+          - { label: "CTA gomb 1 szövege", name: "cta1_text", widget: "string" }
+          - { label: "CTA gomb 2 szövege", name: "cta2_text", widget: "string" }
+
+      - name: "metrikak"
+        label: "Mérőszámok (hero alatt)"
+        file: "_data/metrikak.json"
+        fields:
+          - label: "1. mérőszám"
+            name: "metric1"
+            widget: "object"
+            fields:
+              - { label: "Szám/érték", name: "num", widget: "string" }
+              - { label: "Leírás", name: "label", widget: "string" }
+          - label: "2. mérőszám"
+            name: "metric2"
+            widget: "object"
+            fields:
+              - { label: "Szám/érték", name: "num", widget: "string" }
+              - { label: "Leírás", name: "label", widget: "string" }
+          - label: "3. mérőszám"
+            name: "metric3"
+            widget: "object"
+            fields:
+              - { label: "Szám/érték", name: "num", widget: "string" }
+              - { label: "Leírás", name: "label", widget: "string" }
+
+      - name: "technologia"
+        label: "Technológiai kártyák"
+        file: "_data/technologia.json"
+        fields:
+          - label: "Szekció cím"
+            name: "title"
+            widget: "string"
+          - label: "Szekció bevezető"
+            name: "lead"
+            widget: "text"
+          - label: "Kártyák"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Kategória", name: "cat", widget: "string" }
+              - { label: "Név", name: "name", widget: "string" }
+              - { label: "Leírás", name: "desc", widget: "text" }
+              - { label: "TRL szint (pl. TRL 5)", name: "trl_label", widget: "string" }
+              - { label: "TRL százalék (0-100)", name: "trl_pct", widget: "number" }
+
+      - name: "partner"
+        label: "Stratégiai partnerek szekció"
+        file: "_data/partner.json"
+        fields:
+          - { label: "Szekció cím", name: "title", widget: "string" }
+          - { label: "Szöveg", name: "text", widget: "text" }
+          - label: "Partnerek"
+            name: "logos"
+            widget: "list"
+            fields:
+              - { label: "Partner neve", name: "name", widget: "string" }
+
+      - name: "befekteto"
+        label: "Befektetőknek szekció"
+        file: "_data/befekteto.json"
+        fields:
+          - { label: "Cím", name: "title", widget: "string" }
+          - { label: "Szöveg", name: "text", widget: "text" }
+
+      - name: "hirek"
+        label: "Hírek"
+        file: "_data/hirek.json"
+        fields:
+          - label: "Hírek"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Dátum", name: "date", widget: "string" }
+              - { label: "Forrás", name: "source", widget: "string" }
+              - { label: "Cím", name: "title", widget: "string" }
+              - { label: "Link", name: "url", widget: "string" }

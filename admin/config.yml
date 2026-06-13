@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: meleghegyia/geoinnovations
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "fooldal"
+    label: "Főoldal"
+    files:
+      - name: "hero"
+        label: "Hero szekció"
+        file: "_data/hero.json"
+        fields:
+          - { label: "Főcím", name: "title", widget: "string" }
+          - { label: "Alcím", name: "subtitle", widget: "string" }
+          - { label: "Bevezető szöveg", name: "lead", widget: "text" }
